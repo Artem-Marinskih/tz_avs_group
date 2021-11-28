@@ -1,0 +1,57 @@
+@import '/src/variables';
+
+.CardsContainer {
+  width: 1200px;
+  height: 585px;
+  padding: 97px 120px 130px 150px;
+  background-color: $yellow;
+  border-radius: 50px;
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  &__button {
+    width: 6px;
+    height: 6px;
+    margin-right: 15px;
+    padding: 0;
+    border-radius: 6px;
+    border: none;
+  }
+
+  &__button:hover {
+    width: 10px;
+    height: 10px;
+    background-color: $light-red;
+  }
+
+  &__text {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .CardsContainer {
+    width: 682px;
+  }
+}
+
+@media screen and (max-width: $smartphones) {
+  .CardsContainer {
+    width: 320px;
+    padding: 97px 20px;
+    border-radius: 0;
+  }
+}

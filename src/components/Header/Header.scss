@@ -1,0 +1,192 @@
+@import '/src/variables';
+
+ul {
+  list-style: none;
+  padding: 0px;
+}
+
+.Header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  padding: 0 300px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+    margin: 0 131px 17px 0;
+  }
+
+  &__logo-circle {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    background-color: $violet;
+    border: none;
+    border-radius: 20px;
+  }
+
+  &__logo-ellipse {
+    width: 20px;
+    height: 35px;
+    background-color: $light-red;
+    border: none;
+    border-radius: 20px;
+  }
+
+  &__links {
+    display: flex;
+  }
+
+  &__link {
+    margin-right: 47px;
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__link:hover {
+    color: $violet;
+  }
+
+  &__list-displayOff {
+    display: none;
+  }
+
+  &__list-displayOn {
+    display: block;
+  }
+
+  &__button {
+    width: 180px;
+    height: 60px;
+    background: $violet;
+    color: $white;
+    border-radius: 50px;
+    border: none;
+  }
+
+  &__button,
+  &__link {
+    font-family: Roboto;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  &__burger-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  li {
+    padding: 20px 0 20px 32px;
+    border-top: 1px solid $violet;
+  }
+
+  .arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .Header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 130px;
+    padding: 0;
+
+    &__wrapper {
+      display: none;
+    }
+
+    &__logo {
+      margin: 25px 0 0 32px;
+    }
+
+    &__burger-wrapper {
+      width: 100%;
+      background-color: $white;
+    }
+    &__links {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    &__buttonContainer {
+      display: flex;
+      justify-content: center;
+      height: 148px;
+      border-top: 1px solid $violet;
+      align-items: center;
+    }
+
+    &__link {
+      min-height: 75px;
+      font-size: 27px;
+      font-weight: 500;
+    }
+
+    &__burger-button {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 3%;
+      display: block;
+      width: 64px;
+      height: 64px;
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+
+      &_closed::after {
+        content: '';
+        position: absolute;
+        top: 26px;
+        right: 20px;
+        width: 24px;
+        height: 1.5px;
+        background-color: $black;
+        box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
+      }
+    }
+
+    &__burger-button_opened {
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        top: 30px;
+        right: 19px;
+        width: 24px;
+        height: 2px;
+        background-color: $black;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        box-shadow: none;
+      }
+    }
+  }
+}

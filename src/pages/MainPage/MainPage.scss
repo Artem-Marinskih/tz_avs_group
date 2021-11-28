@@ -1,0 +1,24 @@
+@import '/src/variables';
+
+.MainPage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin: 0;
+    margin-bottom: 37px;
+    font-size: 40px;
+    color: $dark-blue;
+  }
+
+  &__text {
+    margin: 0;
+    margin: 0 20px 56px;
+    max-width: 649px;
+    font-size: 23px;
+    font-weight: 400;
+    text-align: center;
+  }
+}

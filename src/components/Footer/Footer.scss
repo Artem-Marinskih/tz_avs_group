@@ -1,0 +1,116 @@
+@import '/src/variables';
+
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 197px;
+  padding: 0 300px;
+  background-color: $violet;
+
+  &__links {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__logo-circle {
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    background-color: $white;
+    border: none;
+    border-radius: 20px;
+  }
+
+  &__logo-ellipse {
+    width: 20px;
+    height: 35px;
+    background-color: $white;
+    border: none;
+    border-radius: 20px;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    margin-right: 47px;
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__input {
+    width: 419px;
+    height: 48px;
+    margin-right: 33px;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+
+  &__button {
+    width: 180px;
+    height: 60px;
+    background: $dark-yellow;
+    border-radius: 50px;
+    border: none;
+  }
+
+  &__button,
+  &__link {
+    font-family: Roboto;
+    font-size: 16px;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: $tablet) {
+  .Footer {
+    padding: 0;
+
+    &__logo {
+      margin: 32px;
+    }
+
+    &__links {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__link {
+      margin-top: 20px;
+    }
+
+    &__input {
+      width: 247px;
+    }
+  }
+}
+
+@media screen and (max-width: $smartphones) {
+  .Footer {
+    flex-wrap: wrap;
+    height: 344px;
+
+    &__input {
+      margin: 0 0 22px 0;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

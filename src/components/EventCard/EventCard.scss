@@ -1,0 +1,40 @@
+@import '/src/variables';
+
+.EventCard {
+  width: 390px;
+  height: 358px;
+  box-shadow: $shadow;
+  border-radius: 50px;
+  background-color: $light-yellow;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 41px 61px 41px 113px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $dark-blue;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  &__link:hover {
+    color: $violet;
+  }
+}
+
+@media screen and (max-width: $smartphones) {
+  .EventCard {
+    width: 280px;
+
+    &__wrapper {
+      padding: 41px 30px;
+    }
+  }
+}

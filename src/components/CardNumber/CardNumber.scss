@@ -1,0 +1,17 @@
+@import '/src/variables';
+
+.CardNumber {
+  position: absolute;
+  left: -64px;
+  top: 35px;
+  font-family: Roboto;
+  font-weight: bold;
+  font-size: 202px;
+  color: $violet;
+}
+
+@media screen and (max-width: $smartphones) {
+  .CardNumber {
+    display: none;
+  }
+}
